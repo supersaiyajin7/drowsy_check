@@ -27,15 +27,6 @@ def get_landmarks(im):
 	return np.matrix([[p.x, p.y] for p in predict(im, rects[0]).parts()])
 
 
-# def annotate_landmarks(im, landmarks):
-# 	im = im.copy()
-# 	for idx, point in enumerate(landmarks):
-# 		pos = (point[0, 0], point[0, 1])
-# 		cv2.putText(im, str(idx), pos,fontFace=cv2.FONT_HERSHEY_SCRIPT_SIMPLEX,fontScale=0.4,color=(0, 0, 255))
-# 		cv2.circle(im, pos, 3, color=(0, 255, 255))
-# 	return im
-
-
 def top_lip(landmarks):
     top_lip_pts = []
     for i in range(50, 53):
